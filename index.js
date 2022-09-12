@@ -5,7 +5,7 @@ const cors = require("cors");
 // const connectionString = "postgressql://postgres:root@localhost:5432/nodeapp";
 
 const pool = new Pool({
-  user: "postgres",
+  user: "inkargdsjwbdbj",
   host: "ec2-3-223-242-224.compute-1.amazonaws.com",
   database: "dfk89499gj8bjh",
   password: "015fe985e15c67d6d11e64b1cac4c074bdceaf2a1e554438de36291bfa89f0f9",
