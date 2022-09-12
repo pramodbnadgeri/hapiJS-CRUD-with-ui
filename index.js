@@ -6,10 +6,11 @@ const cors = require("cors");
 
 const pool = new Pool({
   user: "inkargdsjwbdbj",
-  host: "ec2-3-223-242-224.compute-1.amazonaws.com",
-  database: "dfk89499gj8bjh",
-  password: "015fe985e15c67d6d11e64b1cac4c074bdceaf2a1e554438de36291bfa89f0f9",
+  host: "ec2-44-209-158-64.compute-1.amazonaws.com",
+  database: "dc08oomclj6vdq",
+  password: "3d003832c5120c51add3a005334fceb3624d824188267756f6e64f56d1122e19",
   port: 5432,
+  ssl: { rejectUnauthorized: false },
 });
 pool.connect();
 // const HapiPostgresConnection = require("hapi-postgres-connection");
