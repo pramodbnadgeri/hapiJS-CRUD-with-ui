@@ -1,6 +1,7 @@
 const Hapi = require("@hapi/hapi");
 const Joi = require("joi");
 const { Pool } = require("pg");
+const cors = require("cors");
 // const connectionString = "postgressql://postgres:root@localhost:5432/nodeapp";
 
 const pool = new Pool({
@@ -21,7 +22,11 @@ pool.connect();
 const init = async () => {
   const server = Hapi.server({
     port: 3000,
-    host: "localhost",
+    host: "0.0.0.0",
+    // host: "localhost",
+    routes: {
+      cors: true,
+    },
   });
 
   function getData(req) {
@@ -36,6 +41,7 @@ const init = async () => {
     });
   }
 
+  // server.use(cors());
   server.route({
     method: "GET",
     path: "/users",
@@ -74,6 +80,7 @@ const init = async () => {
     path: "/users/{phone}",
     handler: async (request, h) => {
       const data = await getDataByPhone(request, h);
+      // console.log(data.rows);
       return data.rows;
     },
   });
