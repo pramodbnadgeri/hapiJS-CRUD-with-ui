@@ -1,0 +1,16 @@
+.getRequest{
+    display: inline-block !important;
+}
+
+.mytable{
+  border: 1px solid;
+  height: 100px;
+}
+
+.myalert{
+    position: sticky;
+    top: 20%;
+    width: 80%;
+    left: 15%;
+    display: none;
+}
