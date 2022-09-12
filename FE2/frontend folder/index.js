@@ -8,7 +8,7 @@ var cors = require("cors");
 // postgres://lzjnkcvqrtyckv:015fe985e15c67d6d11e64b1cac4c074bdceaf2a1e554438de36291bfa89f0f9@ec2-3-223-242-224.compute-1.amazonaws.com:5432/dfk89499gj8bjh
 const pool = new Pool({
   user: "lzjnkcvqrtyckv",
-  host: "ec2-3-223-242-224.compute-1.amazonaws.com:5432",
+  host: "ec2-3-223-242-224.compute-1.amazonaws.com",
   database: "nodfk89499gj8bjhdeapp",
   password: "015fe985e15c67d6d11e64b1cac4c074bdceaf2a1e554438de36291bfa89f0f9",
   port: 5432,
@@ -24,7 +24,7 @@ pool.connect();
 const init = async () => {
   const server = Hapi.server({
     port: 3000,
-    host: "localhost",
+    host: "ec2-3-223-242-224.compute-1.amazonaws.com",
   });
 
   function getData(req) {
