@@ -7,10 +7,10 @@ var cors = require("cors");
 // const connectionString = "postgressql://postgres:root@localhost:5432/nodeapp";
 // postgres://lzjnkcvqrtyckv:015fe985e15c67d6d11e64b1cac4c074bdceaf2a1e554438de36291bfa89f0f9@ec2-3-223-242-224.compute-1.amazonaws.com:5432/dfk89499gj8bjh
 const pool = new Pool({
-  user: "lzjnkcvqrtyckv",
-  host: "ec2-3-223-242-224.compute-1.amazonaws.com",
-  database: "nodfk89499gj8bjhdeapp",
-  password: "015fe985e15c67d6d11e64b1cac4c074bdceaf2a1e554438de36291bfa89f0f9",
+  user: "inkargdsjwbdbj",
+  host: "ec2-44-209-158-64.compute-1.amazonaws.com",
+  database: "dc08oomclj6vdq",
+  password: "3d003832c5120c51add3a005334fceb3624d824188267756f6e64f56d1122e19",
   port: 5432,
 });
 pool.connect();
